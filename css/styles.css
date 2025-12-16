@@ -83,6 +83,12 @@ p {
     max-width: 540px;
 }
 
+.hero-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 24px;
+}
+
 .logo {
     color: var(--primary-gold);
     margin-bottom: 16px;
