@@ -122,6 +122,23 @@ p {
     width: auto;
 }
 
+.cta-buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.ios-coming-soon {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-style: italic;
+    padding: 8px 16px;
+    border: 1px solid var(--warm-brown);
+    border-radius: 8px;
+    background: var(--surface-variant);
+}
+
 .hero-image {
     display: flex;
     justify-content: center;
