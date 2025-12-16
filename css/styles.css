@@ -1,0 +1,364 @@
+/* Gold Spotter Website Styles */
+/* Brand colors from app theme */
+
+:root {
+    --primary-gold: #D4A017;
+    --bright-gold: #FFD700;
+    --warm-brown: #8B7355;
+    --deep-brown-bg: #1E1410;
+    --surface-brown: #2D1F1A;
+    --surface-variant: #3D2914;
+    --text-primary: #F5F5F5;
+    --text-secondary: #B0A090;
+    --text-on-primary: #1E1410;
+
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --border-radius: 12px;
+    --transition: 0.3s ease;
+}
+
+/* Reset and Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--deep-brown-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--deep-brown-bg) 0%, var(--surface-brown) 100%);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 540px;
+}
+
+.logo {
+    color: var(--primary-gold);
+    margin-bottom: 16px;
+}
+
+.tagline {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.description {
+    font-size: 1.125rem;
+    margin-bottom: 32px;
+    line-height: 1.7;
+}
+
+.cta-button {
+    display: inline-block;
+    transition: transform var(--transition), opacity var(--transition);
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.play-badge {
+    height: 60px;
+    width: auto;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+}
+
+.phone-frame {
+    background: var(--surface-variant);
+    border-radius: 32px;
+    padding: 12px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    max-width: 300px;
+}
+
+.screenshot {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    display: block;
+    background: var(--surface-brown);
+    min-height: 500px;
+    object-fit: cover;
+}
+
+/* Features Section */
+.features {
+    padding: 100px 0;
+    background-color: var(--surface-brown);
+}
+
+.section-title {
+    text-align: center;
+    color: var(--primary-gold);
+    margin-bottom: 60px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.feature-card {
+    background: var(--surface-variant);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.feature-image {
+    background: var(--deep-brown-bg);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.feature-screenshot {
+    width: 180px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 16px;
+    background: var(--surface-brown);
+}
+
+.feature-content {
+    padding: 24px;
+}
+
+.feature-content h3 {
+    color: var(--primary-gold);
+    margin-bottom: 12px;
+}
+
+.feature-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 100px 0;
+    background-color: var(--deep-brown-bg);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+}
+
+.benefit-card {
+    text-align: center;
+    padding: 40px 24px;
+    background: var(--surface-brown);
+    border-radius: var(--border-radius);
+    transition: transform var(--transition);
+}
+
+.benefit-card:hover {
+    transform: translateY(-4px);
+}
+
+.benefit-icon {
+    color: var(--primary-gold);
+    margin-bottom: 20px;
+}
+
+.benefit-icon svg {
+    width: 48px;
+    height: 48px;
+}
+
+.benefit-card h3 {
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.benefit-card p {
+    font-size: 0.95rem;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--surface-variant) 0%, var(--surface-brown) 100%);
+    text-align: center;
+}
+
+.cta-section h2 {
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.cta-section p {
+    font-size: 1.125rem;
+    margin-bottom: 32px;
+}
+
+/* Footer */
+.footer {
+    padding: 40px 0;
+    background-color: var(--deep-brown-bg);
+    border-top: 1px solid var(--surface-variant);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.copyright {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--primary-gold);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        order: 1;
+    }
+
+    .hero-image {
+        order: 2;
+    }
+
+    .phone-frame {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 0;
+        min-height: auto;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .play-badge {
+        height: 50px;
+    }
+
+    .screenshot {
+        min-height: 400px;
+    }
+
+    .feature-screenshot {
+        width: 150px;
+        height: 300px;
+    }
+}
