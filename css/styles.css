@@ -146,8 +146,17 @@ p {
 }
 
 .store-badge img {
-    height: 50px;
+    height: 40px;
     width: auto;
+}
+
+/* Google Play badge has built-in padding, so make it larger to visually match App Store */
+.store-badge img[alt*="Google Play"] {
+    height: 60px;
+}
+
+.store-badge img[alt*="App Store"] {
+    height: 40px;
 }
 
 .store-badge--disabled {
