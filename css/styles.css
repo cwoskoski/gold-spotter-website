@@ -124,19 +124,63 @@ p {
 
 .cta-buttons {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 16px;
+}
+
+.store-badges {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
-.ios-coming-soon {
+.store-badge {
+    display: inline-block;
+    transition: transform var(--transition), opacity var(--transition);
+}
+
+.store-badge:hover {
+    transform: scale(1.05);
+}
+
+.store-badge img {
+    height: 50px;
+    width: auto;
+}
+
+.store-badge--disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    position: relative;
+}
+
+.store-badge--disabled:hover {
+    transform: none;
+}
+
+.store-badge--disabled::after {
+    content: 'Coming Soon';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.cta-tagline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     color: var(--text-secondary);
     font-size: 0.95rem;
-    font-style: italic;
-    padding: 8px 16px;
-    border: 1px solid var(--warm-brown);
-    border-radius: 8px;
-    background: var(--surface-variant);
+}
+
+.cta-tagline .free-badge {
+    margin-left: 0;
 }
 
 .hero-image {
@@ -317,6 +361,15 @@ p {
     color: var(--primary-gold);
 }
 
+/* Centered CTA variant */
+.cta-section .cta-buttons {
+    align-items: center;
+}
+
+.cta-section .cta-tagline {
+    justify-content: center;
+}
+
 /* Responsive Design */
 @media (max-width: 968px) {
     .hero-content {
@@ -327,6 +380,10 @@ p {
     .hero-text {
         max-width: 100%;
         order: 1;
+    }
+
+    .hero-text .cta-buttons {
+        align-items: center;
     }
 
     .hero-image {
@@ -514,8 +571,12 @@ p {
     text-align: center;
 }
 
-.pricing-cta .cta-button {
-    margin-bottom: 16px;
+.pricing-cta .cta-buttons {
+    align-items: center;
+}
+
+.pricing-cta .store-badges {
+    justify-content: center;
 }
 
 .pricing-link {
