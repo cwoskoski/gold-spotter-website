@@ -6,6 +6,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a static marketing website for Gold Spotter, a gold prospecting mobile app. The site showcases app features and provides Google Play download links.
 
+## Related Repository
+
+The Gold Spotter mobile app source code is in a separate repository:
+- **Git URL**: `git@github.com:cwoskoski/gold-spotter.git`
+- **Relative path**: `../gold-spotter`
+
+When working on features that require coordination between the website and app, reference the app repo at the relative path above.
+
 ## Architecture
 
 - **Static site**: No build system, framework, or dependencies
