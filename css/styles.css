@@ -175,14 +175,17 @@ p {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    line-height: 1;
+    margin: 0;
 }
 
 .cta-tagline .free-badge {
-    margin-left: 0;
-    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.cta-tagline-text {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1;
 }
 
 .hero-image {
