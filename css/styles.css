@@ -174,13 +174,15 @@ p {
 .cta-tagline {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     color: var(--text-secondary);
     font-size: 0.95rem;
+    line-height: 1;
 }
 
 .cta-tagline .free-badge {
     margin-left: 0;
+    vertical-align: middle;
 }
 
 .hero-image {
@@ -461,7 +463,8 @@ p {
 
 /* Free Badge */
 .free-badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     background: var(--surface-variant);
     color: var(--bright-gold);
     font-size: 0.875rem;
@@ -469,8 +472,7 @@ p {
     padding: 6px 12px;
     border-radius: 20px;
     border: 1px solid var(--primary-gold);
-    margin-left: 12px;
-    vertical-align: middle;
+    line-height: 1;
 }
 
 /* Price Cards */
