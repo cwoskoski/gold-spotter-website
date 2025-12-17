@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Sitemap: https://gold-spotter.com/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
