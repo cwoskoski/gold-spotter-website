@@ -566,6 +566,15 @@ p {
     color: var(--bright-gold);
 }
 
+.price-features li.more-coming {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.price-features li.more-coming::before {
+    content: '';
+}
+
 /* Pricing CTA */
 .pricing-cta {
     text-align: center;
