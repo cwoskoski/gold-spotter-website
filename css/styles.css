@@ -220,6 +220,69 @@ p {
     object-fit: cover;
 }
 
+/* Privacy & Security Section */
+.privacy-section {
+    padding: 80px 0;
+    background: var(--deep-brown-bg);
+    text-align: center;
+}
+
+.privacy-intro {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 48px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.privacy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.privacy-card {
+    background: var(--surface-brown);
+    border-radius: var(--border-radius);
+    padding: 32px 24px;
+    border-top: 3px solid var(--primary-gold);
+    transition: transform var(--transition);
+}
+
+.privacy-card:hover {
+    transform: translateY(-4px);
+}
+
+.privacy-icon {
+    color: var(--primary-gold);
+    margin-bottom: 20px;
+}
+
+.privacy-icon svg {
+    width: 48px;
+    height: 48px;
+}
+
+.privacy-card h3 {
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    font-size: 1.125rem;
+}
+
+.privacy-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .privacy-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+}
+
 /* Features Section */
 .features {
     padding: 100px 0;
